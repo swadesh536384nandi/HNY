@@ -1,0 +1,74 @@
+        :root {
+            --bg: #050505;
+            --gold: #ffcc00;
+            --red: #ff4d4d;
+            --green: #2ecc71;
+            --fire: #ff4500;
+        }
+
+        body {
+            margin: 0;
+            background: var(--bg);
+            color: white;
+            font-family: 'Arial Black', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .container { text-align: center; position: relative; }
+        #countdown { font-size: 10rem; color: var(--gold); }
+
+        /* Title starts HIDDEN */
+        #title {
+            display: none; 
+            font-size: 6rem;
+            margin: 0;
+            font-weight: 900;
+            text-transform: uppercase;
+            background: linear-gradient(45deg, #ff0000, #ffcc00, #00ff00, #00ffff, #0000ff, #ff00ff, #ff0000);
+            background-size: 300% auto;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 2px 2px 0px rgba(0,0,0,0.3), 4px 4px 15px rgba(255, 204, 0, 0.4);
+            animation: colorMove 4s linear infinite, pulse 2s ease-in-out infinite alternate;
+        }
+
+        #year-display {
+            display: none;
+            font-size: 8rem;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        .digit-box { position: relative; width: 100px; height: 150px; }
+
+        .balloon {
+            position: absolute;
+            width: 70px;
+            height: 85px;
+            border-radius: 50% 50% 50% 50% / 40% 40% 60% 60%;
+            z-index: 10;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .balloon::after { content: ""; position: absolute; bottom: -60px; left: 50%; width: 2px; height: 60px; background: rgba(255,255,255,0.4); }
+
+        #red-balloon { background: pink; bottom: -200px; }
+        #green-balloon { background: yellow; bottom: -200px; }
+
+        .num { position: absolute; width: 100%; left: 0; color: var(--gold); }
+        #num5 { top: 0; color: red;}
+        #num6 { top: 100vh; color: green;}
+
+        .fire-container { position: absolute; bottom: -50px; display: none; width: 100%; justify-content: space-around; }
+        .flame { width: 30px; height: 30px; background: var(--fire); border-radius: 50% 0 50% 50%; transform: rotate(-45deg); box-shadow: 0 0 20px var(--fire); animation: burn 0.5s infinite alternate; }
+
+        @keyframes burn { from { transform: rotate(-45deg) scale(1); } to { transform: rotate(-45deg) scale(1.5); opacity: 0.7; } }
+        @keyframes colorMove { 0% { background-position: 0% center; } 100% { background-position: 300% center; } }
+        @keyframes pulse { from { transform: rotateX(10deg) rotateY(-10deg) translateZ(20px); } to { transform: rotateX(-10deg) rotateY(10deg) translateZ(40px); } }
+
+

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Year 2026 </title>
+	<link rel="icon" href="https://lh3.googleusercontent.com/pw/AP1GczMrs-AgHSvbO71VniZYPLLtxHhYPdRSB9PA3H2HJYHh4hU0cHZwiKW2SzGJJ7q9KrbsfKNmJh1uV22r3prdyeXJFf5rPu1g0EL1h8fkB5nsBnJ8G1X7ERSfEKOfvyGbmuun7dtVoW1NuCTqk439W3ZP=w811-h811-s-no-gm?authuser=0" size="32x32">
+	<link rel="stylesheet" href="style.css">	
+
+</head>
+
+
+<script src="right_click.js"></script>	
+
+<body>
+
+    <div class="card-wrapper" id="card" onclick="toggleCard()">
+        <div class="card-face cover">
+			<div class="ornament">Happy New Year</div>
+            <div class="ornament"> 2026 </div>
+            <h1>Greetings</h1>
+            <p style="color: cyan; font-size: 1.5rem; letter-spacing: 2px; margin-top: 5px;">👉🏻 TAP TO OPEN 👉🏻 </p>
+        </div>
+
+        <div class="card-face inside">
+            <div>
+                <p class="inner_head" id="status-text" style="color:#ae3eae; font-size: 1.1rem; letter-spacing: 3px;">COUNTDOWN TO</p>
+                <h1 class="year-display">2026</h1>
+                <h2 style="color: #fff; font-size: 1.4rem; margin: 10px 0;">Happy New Year</h2>
+
+                <div id="countdown" class="countdown-container">
+                    <div class="time-box"><span id="days">00</span><p>Days</p></div>
+                    <div class="time-box"><span id="hours">00</span><p>Hours</p></div>
+                    <div class="time-box"><span id="mins">00</span><p>Mins</p></div>
+                    <div class="time-box"><span id="secs">00</span><p>Secs</p></div>
+                </div>
+
+                <p id="message-text_2" style="font-size: 0.9rem; line-height: 1.4; opacity: 0.9;">
+                    Wishing you a year filled with elegance, success, and wonderful moments.
+                </p>
+				<!--<p id="message-text_2" style="font-size: 0.9rem; line-height: 1.4; opacity: 0.9;">-->
+                   
+                </p>
+            </div>
+
+            <div>
+                <button class="btn-celebrate" onclick="event.stopPropagation(); celebrate()">Celebrate! 🎉</button>
+                <div class="signature">
+                    <small style="display:block; font-size: 0.7rem; opacity: 0.6;">Warmly,</small>
+                    SWADESH NANDI
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <audio id="bgMusic" loop>
+        <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+    </audio>
+	
+	<script src="script.js"></script>
+</body>
+</html>
